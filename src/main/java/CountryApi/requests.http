@@ -1,0 +1,57 @@
+GET http://localhost:8080/api/country/Tanzania
+Accept: application/json
+
+### Create Country Info
+POST http://localhost:8080/api/v1
+Content-Type: application/json
+
+{
+  "name": "Kenya"
+}
+
+
+###
+
+POST http://localhost:8080/api/v1/country
+Content-Type: application/json
+
+{
+  "name": "Kenya"
+}
+
+
+
+###
+GET http://localhost:8080/api/v1/country/1
+Content-Type: application/json
+
+
+
+###
+DELETE http://localhost:8080/api/v1/country/1
+Content-Type: application/json
+
+
+
+###
+PUT http://localhost:8080/api/v1/updatecountry
+Content-Type: application/json
+
+{
+  "sISOCode": "KE",
+
+  "sName": "KEnya",
+
+  "sCapitalCity": "Nairobi",
+
+  "sPhoneCode": "2547",
+
+  "sContinentCode": "AF",
+
+  "sCurrencyISOCode": "KSH",
+
+  "sCountryFlag": "FLAF",
+
+
+  "languages": []
+}

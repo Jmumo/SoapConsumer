@@ -1,0 +1,27 @@
+#spring.application.name=Api
+
+
+spring:
+  application:
+    name: Api
+  datasource:
+    url: jdbc:mysql://localhost:3306/countryApi
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+
+
+
+
+soap:
+  url: http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso
