@@ -1,6 +1,12 @@
+
+
 This is a Soap Consumer Api
 
 Utilises Java 17
+
+checkout to master Branch and git pull
+
+Run As the Normal SpringBoot App using Comand ./mvnw spring-boot:run
 
 Replace The .yml configurations with your own
 
