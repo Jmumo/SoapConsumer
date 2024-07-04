@@ -6,8 +6,8 @@ spring:
     name: Api
   datasource:
     url: jdbc:mysql://localhost:3306/countryApi
-    username: root
-    password: root
+    username:
+    password:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
