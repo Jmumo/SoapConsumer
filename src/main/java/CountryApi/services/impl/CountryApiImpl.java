@@ -135,14 +135,18 @@ public class CountryApiImpl implements CountryApiService {
     public HttpResponse updateCountryById(UpdateCountryDto updateCountryDto) {
 
         HttpResponse httpResponse = new HttpResponse();
-
         CountryInfo existingCountryInfo = countryInfoRepository.findBysName(updateCountryDto.getSName());
-        BeanUtils.copyProperties(updateCountryDto, existingCountryInfo, "id");
 
-        CountryInfo UpdatedCountryInfo = countryInfoRepository.save(existingCountryInfo);
+        if(!(existingCountryInfo == null) && !SharedUtils.isNullOrEmpty(existingCountryInfo.getId().toString())){
+            log.info("Country with the following name is available: {}", updateCountryDto.getSName());
+            BeanUtils.copyProperties(updateCountryDto, existingCountryInfo, "id");
+            CountryInfo UpdatedCountryInfo = countryInfoRepository.save(existingCountryInfo);
+            httpResponse.setBody(UpdatedCountryInfo.toString());
+        }else {
+            log.info("Country with the following name is not available: {}", updateCountryDto.getSName());
+            httpResponse.setBody("Country with the following name is not available: " + updateCountryDto.getSName());
+        }
 
-        httpResponse.setBody(UpdatedCountryInfo.toString());
-        ;
         return httpResponse;
     }
 }
