@@ -7,7 +7,7 @@ import CountryApi.dto.CreateCountryDto;
 import CountryApi.dto.HttpResponse;
 import CountryApi.dto.UpdateCountryDto;
 import CountryApi.services.CountryApiService;
-import CountryApi.services.SoapService;
+import CountryApi.soap.Services.SoapService;
 import CountryApi.soap.fullCountryInfo.response.SoapEnvelopeResponse;
 import CountryApi.utils.SharedUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;

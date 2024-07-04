@@ -1,4 +1,4 @@
-package CountryApi.services;
+package CountryApi.soap.Services;
 
 
 import CountryApi.soap.fullCountryInfo.request.FullCountryInfo;
